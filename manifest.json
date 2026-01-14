@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "Auto Excel Form Filler",
+    "version": "1.8",
+    "description": "Fill Java Faces form fields from Excel file with persistent state",
+    "permissions": ["scripting", "activeTab", "tabs", "storage"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_title": "AutoFill Form"
+    },
+    "host_permissions": ["<all_urls>"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["styles.css", "xlsx.full.min.js","logo.png"],
+        "matches": ["<all_urls>"]
+      }
+    ],
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'; style-src 'self'"
+    }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+
+  <title>Auto Form Filler</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <img src="logo.png" alt="Logo" class="logo" />
+    <h1 class="header-text">قسم تقنية المعلومات</h1>
+    <h1 class="header-text2">محمد مجدي</h1>
+  </header>
+  <h3>Choose Excel File</h3>
+  <input type="file" id="excelFile" accept=".xlsx, .xls" />
+  <div class="button-container">
+    <button id="fillBtn">Fill Next Row</button>
+    <button id="submitBtn">Fill and Submit</button>
+    <button id="submitFullBtn">Fill and Submit Full</button>
+  </div>
+  <button id="resetBtn">Reset Extension</button>
+  <p>Current Row: <span id="currentRow">1</span></p>
+
+  <script src="xlsx.full.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
