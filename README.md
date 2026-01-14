@@ -73,7 +73,3 @@ Developed by Mohamed Magdy for the Information Technology Department.
 ## Version
 
 Current version: 1.8
-
-## License
-
-[Add license information here]
